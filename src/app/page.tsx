@@ -4,6 +4,9 @@ import Quienes from "./components/Quienes"
 import Productividad from "./components/Productividad";
 import Servicios from "./components/Servicios"
 import Beneficios from "./components/Beneficios"
+import Footer from "./components/Footer";
+import Contacto from "./components/Contacto";
+import WhatsAppButton from "./components/Whatsapp";
 
 export default function Home() {
   return (
@@ -14,6 +17,9 @@ export default function Home() {
       <Productividad/>
       <Servicios/>
       <Beneficios/>
+      <Contacto/>
+      <Footer/>
+      <WhatsAppButton/>
     </div>
   )
 }
