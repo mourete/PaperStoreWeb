@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const AboutUs: React.FC = () => {
     return (
       <section id="quienes" className="py-20 bg-white">
@@ -26,7 +24,7 @@ const AboutUs: React.FC = () => {
           </div>
   
           <div className="flex justify-center">
-            <Image
+            <img
               src="/quienes.png"
               alt="Quiénes somos"
               className="max-w-full h-auto rounded-lg shadow-md"

@@ -1,4 +1,4 @@
-import { FaFacebookF, FaGoogle, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaGoogle, FaWhatsapp } from "react-icons/fa";
 import { HiLocationMarker, HiMail, HiClock } from "react-icons/hi";
 import Settings from "../settings";
 

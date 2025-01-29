@@ -1,5 +1,4 @@
-import { FaFacebookF, FaGoogle, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import Image from "next/image"
+import { FaFacebookF, FaGoogle, FaWhatsapp } from "react-icons/fa";
 
 import Settings from "../settings";
 
@@ -8,7 +7,7 @@ const Contacto: React.FC = () => {
     <section id="contacto" className="py-12 bg-white text-white">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
-          <Image 
+          <img 
             src="/contacto.png"  
             className="w-full h-auto rounded-lg shadow-md"
             alt=""

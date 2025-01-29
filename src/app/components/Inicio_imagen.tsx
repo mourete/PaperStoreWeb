@@ -1,12 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 const InicioImagen = () => {
   const images = [
     {
-      url: "portada.png",
+      url: "/portada.png",
       title:
         "FACILITA EL PROCESO GENERAL DE LEVANTAMIENTO DE DATOS PARA LA EVALUACIÓN DE GRAN ESCALA Y MULTIDIMENSIONAL PARA ORGANIZACIONES DINÁMICAS APOYO PARA LA PLANIFICACIÓN Y EVALUACIÓN DE LAS ACCIONES Y TOMAS DE DECISIONES.",
     },
@@ -56,10 +55,11 @@ const InicioImagen = () => {
             index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
-          <Image
+          <img
             src={image.url}
             alt={`Slide ${index + 1}`}
             className="w-full h-full object-cover"
+            fill
           />
           <div className="absolute inset-0 flex flex-col justify-center items-start bg-black bg-opacity-50 text-left px-8 sm:px-12 md:px-20 lg:px-15 transform translate-y-20 text-justify">
             <div className="max-w-2xl">

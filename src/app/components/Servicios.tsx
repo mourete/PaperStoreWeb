@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 const ServiciosCarrusel = () => {
   const services = [
@@ -68,7 +67,7 @@ const ServiciosCarrusel = () => {
             >
               <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center h-60">
 
-                <Image
+                <img
                   src={service.image}
                   alt={service.title}
                   className="w-32 h-32 mb-4 rounded-lg object-cover border-2 border-gray-300"

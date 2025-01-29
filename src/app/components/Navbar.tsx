@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -36,7 +35,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 w-full flex items-center justify-between py-4 bg-white shadow-md z-50">
       <div className="relative h-12 w-8 ml-20">
-        <Image src="/logo.png" alt="SoftPath" className="h-12 max-w-md" />
+        <img src="/logo.png" alt="SoftPath" className="h-12 max-w-md" />
       </div>
       <ul className="flex space-x-4 text-sm mr-20">
         <li>
