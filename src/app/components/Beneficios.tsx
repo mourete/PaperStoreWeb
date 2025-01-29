@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Beneficios = () => {
   const services = [
     {
@@ -51,7 +53,7 @@ const Beneficios = () => {
             key={index}
             className="bg-white border border-gray-200 rounded-lg shadow-lg p-6 text-center flex flex-col items-center transform transition-transform duration-300 hover:scale-105"
           >
-            <img
+            <Image
               src={service.image}
               alt={service.title}
               className="w-20 h-20 mb-4 object-contain"

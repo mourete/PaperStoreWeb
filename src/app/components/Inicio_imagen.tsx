@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const InicioImagen = () => {
   const images = [
@@ -21,7 +22,8 @@ const InicioImagen = () => {
     },
     {
       url: "/portada4.png",
-      title: "PAPERSTORE EMPODERA A LAS EMPRESAS OPTIMIZANDO SUS PROCESOS, AUMENTANDO SU PRODUCTIVIDAD Y ALCANZANDO SUS OBJETIVOS.",
+      title:
+        "PAPERSTORE EMPODERA A LAS EMPRESAS OPTIMIZANDO SUS PROCESOS, AUMENTANDO SU PRODUCTIVIDAD Y ALCANZANDO SUS OBJETIVOS.",
     },
   ];
 
@@ -54,20 +56,18 @@ const InicioImagen = () => {
             index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
-          <img
+          <Image
             src={image.url}
             alt={`Slide ${index + 1}`}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 flex flex-col justify-center items-start bg-black bg-opacity-50 text-left px-8 sm:px-12 md:px-20 lg:px-15 transform translate-y-20 text-justify">
             <div className="max-w-2xl">
-            <h1 className="text-xl md:text-2xl font-bold text-white mb-4 animate-fadeInUp">
+              <h1 className="text-xl md:text-2xl font-bold text-white mb-4 animate-fadeInUp">
                 {image.title}
-            </h1>
+              </h1>
             </div>
           </div>
-
-
         </div>
       ))}
       <button

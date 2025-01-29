@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
+
 
 const Sectores = () => {
   const services = [
@@ -69,7 +71,7 @@ const Sectores = () => {
               className="flex-shrink-0 w-full sm:w-1/3 md:w-1/4 lg:w-1/5 px-2"
             >
               <div className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center h-full min-h-[350px]">
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
                   className="w-full h-32 object-cover mb-4 rounded-lg border-2 border-gray-300"

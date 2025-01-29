@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Clientes = () => {
     const cases = [
       {
@@ -34,7 +36,7 @@ const Clientes = () => {
               className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center"
             >
               <div className="w-29 h-32 rounded-lg overflow-hidden mb-4 border-4 border-lime-300">
-                <img
+                <Image
                   src={item.icon}
                   alt={item.title}
                   className="w-full h-full object-contain"

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Productividad = () => {
     const features = [
       {
@@ -26,7 +28,7 @@ const Productividad = () => {
               key={index}
               className="flex flex-col items-center justify-center w-40 h-40 rounded-full bg-gradient-to-b from-blue-500 to-lime-500 shadow-lg text-white hover:scale-105 transition duration-300"
             >
-              <img
+              <Image
                 src={feature.image}
                 alt={feature.title}
                 className="w-16 h-16 mb-2 object-contain"
