@@ -59,7 +59,6 @@ const InicioImagen = () => {
             src={image.url}
             alt={`Slide ${index + 1}`}
             className="w-full h-full object-cover"
-            fill
           />
           <div className="absolute inset-0 flex flex-col justify-center items-start bg-black bg-opacity-50 text-left px-8 sm:px-12 md:px-20 lg:px-15 transform translate-y-20 text-justify">
             <div className="max-w-2xl">
