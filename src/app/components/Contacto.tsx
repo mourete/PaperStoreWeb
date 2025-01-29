@@ -1,5 +1,7 @@
 import { FaFacebookF, FaGoogle, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
+import Settings from "../settings";
+
 const Contacto: React.FC = () => {
   return (
     <section id="contacto" className="py-12 bg-white text-white">
@@ -15,7 +17,7 @@ const Contacto: React.FC = () => {
           <h2 className="text-3xl font-bold mt-4 text-black text-center">¡Contacta con Nosotros!</h2>
           <form className="space-y-4 mt-6">
                 <a
-                  href="https://api.whatsapp.com/send/?phone=528132691277&text=Hola%2C%20me%20gustaría%20más%20información."
+                  href={Settings.whatsAppLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center px-4 py-2 text-white bg-green-600 rounded hover:bg-green-700"
@@ -24,7 +26,7 @@ const Contacto: React.FC = () => {
                   Whatsapp
                 </a>
                 <a
-                  href="https://mail.google.com/mail/?view=cm&to=contacto@softpath.com.mx"
+                  href={Settings.correoLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center px-4 py-2 text-white bg-red-600 rounded hover:bg-red-700"
@@ -33,7 +35,7 @@ const Contacto: React.FC = () => {
                   Correo
                 </a>
                 <a
-                  href="https://www.facebook.com/profile.php?id=61572738472398&sk=about"
+                  href={Settings.facebookLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center px-4 py-2 text-white bg-blue-900 rounded hover:bg-blue-950"
@@ -42,7 +44,7 @@ const Contacto: React.FC = () => {
                   Facebook
                 </a>
                 {/* <a
-                  href="https://www.instagram.com/softpathoficial/"
+                  href={Settings.instagramLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center px-4 py-2 text-white bg-pink-600 rounded bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600"

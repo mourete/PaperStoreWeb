@@ -1,5 +1,6 @@
 import { FaFacebookF, FaGoogle, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { HiLocationMarker, HiMail, HiClock } from "react-icons/hi";
+import Settings from "../settings";
 
 const Footer: React.FC = () => {
   return (
@@ -31,25 +32,25 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-col items-center text-sm text-gray-600">
           <div className="flex space-x-6 mb-4">
             <a
-              href="https://www.facebook.com/profile.php?id=61572738472398&sk=about"
+              href={Settings.facebookLink}
               className="hover:text-blue-700"
             >
               <FaFacebookF size={20} />
             </a>
             {/* <a
-              href="https://www.instagram.com/softpathoficial/"
+              href={Settings.instagramLink}
               className="hover:text-blue-700"
             >
               <FaInstagram size={20} />
             </a> */}
             <a
-              href="https://api.whatsapp.com/send/?phone=528132691277&text&type=phone_number&app_absent=0"
+              href={Settings.whatsAppLink}
               className="hover:text-blue-700"
             >
               <FaWhatsapp size={20} />
             </a>
             <a
-              href="https://mail.google.com/mail/?view=cm&to=contacto@softpath.com.mx"
+              href={Settings.correoLink}
               className="hover:text-blue-700"
             >
               <FaGoogle size={20} />
