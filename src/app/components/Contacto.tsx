@@ -2,7 +2,7 @@ import { FaFacebookF, FaGoogle, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Contacto: React.FC = () => {
   return (
-    <section className="py-12 bg-blue-200 text-white">
+    <section id="contacto" className="py-12 bg-white text-white">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <img 
@@ -33,7 +33,7 @@ const Contacto: React.FC = () => {
                   Correo
                 </a>
                 <a
-                  href="https://www.facebook.com/softpathoficial"
+                  href="https://www.facebook.com/profile.php?id=61572738472398&sk=about"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center px-4 py-2 text-white bg-blue-900 rounded hover:bg-blue-950"
@@ -41,7 +41,7 @@ const Contacto: React.FC = () => {
                   <FaFacebookF size={20} className="mr-2" />
                   Facebook
                 </a>
-                <a
+                {/* <a
                   href="https://www.instagram.com/softpathoficial/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -49,7 +49,7 @@ const Contacto: React.FC = () => {
                 >
                   <FaInstagram size={20} className="mr-2" />
                   Instagram
-                </a>
+                </a> */}
           </form>
         </div>
       </div>

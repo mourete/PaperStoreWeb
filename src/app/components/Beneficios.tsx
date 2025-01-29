@@ -39,7 +39,7 @@ const Beneficios = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="beneficios" className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto text-center mb-8">
         <h2 className="text-4xl font-bold text-blue-800 uppercase">
           Nuestros Beneficios

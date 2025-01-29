@@ -1,6 +1,6 @@
 const AboutUs: React.FC = () => {
     return (
-      <section className="py-20 bg-white">
+      <section id="quienes" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center">
             <span className="block w-20 h-[1px] bg-lime-300"></span>

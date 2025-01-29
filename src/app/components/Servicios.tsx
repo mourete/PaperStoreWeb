@@ -49,14 +49,14 @@ const ServiciosCarrusel = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-blue-100">
+    <section id="servicios" className="py-16 bg-blue-100">
       <div className="text-center">
         <h2 className="text-5xl font-bold text-blue-800 uppercase mb-6">
           Servicios
         </h2>
       </div>
       <div className="relative max-w-5xl mx-auto">
-        {/* Carrusel */}
+
         <div className="flex overflow-hidden">
           {services.map((service, index) => (
             <div
@@ -65,8 +65,8 @@ const ServiciosCarrusel = () => {
                 index === currentIndex ? "scale-100" : "scale-90 opacity-70"
               }`}
             >
-              <div className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center">
-                {/* Imagen cuadrada con bordes redondeados */}
+              <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center h-60">
+
                 <img
                   src={service.image}
                   alt={service.title}
@@ -81,7 +81,7 @@ const ServiciosCarrusel = () => {
           ))}
         </div>
 
-        {/* Botones de navegación */}
+
         <div className="absolute inset-y-0 left-0 flex items-center">
           <button
             onClick={prevSlide}

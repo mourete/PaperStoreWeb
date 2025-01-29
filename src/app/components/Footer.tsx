@@ -31,17 +31,17 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-col items-center text-sm text-gray-600">
           <div className="flex space-x-6 mb-4">
             <a
-              href="https://www.facebook.com/softpathoficial"
+              href="https://www.facebook.com/profile.php?id=61572738472398&sk=about"
               className="hover:text-blue-700"
             >
               <FaFacebookF size={20} />
             </a>
-            <a
+            {/* <a
               href="https://www.instagram.com/softpathoficial/"
               className="hover:text-blue-700"
             >
               <FaInstagram size={20} />
-            </a>
+            </a> */}
             <a
               href="https://api.whatsapp.com/send/?phone=528132691277&text&type=phone_number&app_absent=0"
               className="hover:text-blue-700"

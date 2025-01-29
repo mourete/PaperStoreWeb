@@ -7,6 +7,8 @@ import Beneficios from "./components/Beneficios"
 import Footer from "./components/Footer";
 import Contacto from "./components/Contacto";
 import WhatsAppButton from "./components/Whatsapp";
+import Clientes from "./components/Clientes";
+import Sectores from "./components/Sectores";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <Productividad/>
       <Servicios/>
       <Beneficios/>
+      <Clientes/>
+      <Sectores/>
       <Contacto/>
       <Footer/>
       <WhatsAppButton/>
