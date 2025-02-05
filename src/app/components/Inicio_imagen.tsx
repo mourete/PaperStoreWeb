@@ -46,12 +46,12 @@ const InicioImagen = () => {
   return (
     <section
       id="inicio"
-      className="relative w-full h-[40vh] sm:h-[40vh] md:h-[80vh] lg:h-[85vh] overflow-hidden"
+      className="relative w-full h-[50vh] sm:h-[60vh] md:h-[80vh] lg:h-[85vh] overflow-hidden"
     >
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1500 ${
+          className={`absolute inset-0 transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
@@ -60,24 +60,25 @@ const InicioImagen = () => {
             alt={`Slide ${index + 1}`}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 flex flex-col justify-center items-start bg-black bg-opacity-50 text-left px-8 sm:px-12 md:px-20 lg:px-15 transform translate-y-20 text-justify">
-            <div className="max-w-2xl">
-              <h1 className="text-xl md:text-2xl font-bold text-white mb-4 animate-fadeInUp">
+          <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end">
+            <div className="px-4 py-6 sm:px-8 sm:py-8 md:max-w-3xl md:mx-20 text-left">
+              <h1 className="text-sm sm:text-lg md:text-2xl font-bold text-white mb-2 sm:mb-4 leading-relaxed">
                 {image.title}
               </h1>
             </div>
           </div>
         </div>
       ))}
+
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 z-20 hover:bg-opacity-70"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 z-20 hover:bg-opacity-70"
       >
         ❮
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 z-20 hover:bg-opacity-70"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 z-20 hover:bg-opacity-70"
       >
         ❯
       </button>

@@ -31,20 +31,37 @@ const ServiciosCarrusel = () => {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [desktopIndex, setDesktopIndex] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
+  const nextDesktop = () => {
+    setDesktopIndex((prevIndex) => (prevIndex + 1) % services.length);
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
+  const prevDesktop = () => {
+    setDesktopIndex((prevIndex) =>
       prevIndex === 0 ? services.length - 1 : prevIndex - 1
     );
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(nextDesktop, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const [mobileIndex, setMobileIndex] = useState(0);
+
+  const nextMobile = () => {
+    setMobileIndex((prevIndex) => (prevIndex + 1) % services.length);
+  };
+
+  const prevMobile = () => {
+    setMobileIndex((prevIndex) =>
+      prevIndex === 0 ? services.length - 1 : prevIndex - 1
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextMobile, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -55,45 +72,97 @@ const ServiciosCarrusel = () => {
           Servicios
         </h2>
       </div>
-      <div className="relative max-w-5xl mx-auto">
 
-        <div className="flex overflow-hidden">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`flex-shrink-0 w-full sm:w-1/3 md:w-1/4 lg:w-1/5 transform transition-transform duration-500 ${
-                index === currentIndex ? "scale-100" : "scale-90 opacity-70"
-              }`}
-            >
-              <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center h-60">
-
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-32 h-32 mb-4 rounded-lg object-cover border-2 border-gray-300"
-                />
-                <h3 className="text-xl font-bold text-blue-800">
-                  {service.title}
-                </h3>
-                <p className="text-black text-center">{service.description}</p>
+      <div className="max-w-5xl mx-auto relative">
+        <div className="hidden sm:block">
+          <div className="flex overflow-hidden">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className={`flex-shrink-0 w-full sm:w-1/3 md:w-1/4 lg:w-1/5 transform transition-transform duration-500 ${
+                  index === desktopIndex ? "scale-100" : "scale-90 opacity-70"
+                }`}
+              >
+                <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center h-60">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-32 h-32 mb-4 rounded-lg object-cover border-2 border-gray-300"
+                  />
+                  <h3 className="text-xl font-bold text-blue-800">
+                    {service.title}
+                  </h3>
+                  <p className="text-black text-center">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="absolute inset-y-0 left-0 flex items-center">
+            <button
+              onClick={prevDesktop}
+              className="bg-blue-800 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-600 focus:outline-none"
+            >
+              ❮
+            </button>
+          </div>
+          <div className="absolute inset-y-0 right-0 flex items-center">
+            <button
+              onClick={nextDesktop}
+              className="bg-blue-800 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-600 focus:outline-none"
+            >
+              ❯
+            </button>
+          </div>
         </div>
 
 
-        <div className="absolute inset-y-0 left-0 flex items-center">
+        <div className="sm:hidden relative overflow-hidden w-full h-72">
+          <div
+            className="flex transition-transform duration-500 h-full"
+            style={{ transform: `translateX(-${mobileIndex * 100}%)` }}
+          >
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="w-full flex-shrink-0 flex justify-center"
+              >
+                <div className="bg-white rounded-lg shadow-md p-6 w-64 flex flex-col items-center">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-24 h-24 mb-4 rounded-lg object-cover border-2 border-gray-300"
+                  />
+                  <h3 className="text-xl font-bold text-blue-800">
+                    {service.title}
+                  </h3>
+                  <p className="text-black text-center">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
           <button
-            onClick={prevSlide}
-            className="bg-blue-800 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-600"
+            onClick={prevMobile}
+            className="absolute inset-y-0 left-0 flex items-center
+                    bg-blue-800 text-white px-2 py-1 text-sm leading-none 
+                    rounded-full shadow-md
+                    transform scale-75 hover:scale-60
+                    z-5"
           >
             ❮
           </button>
-        </div>
-        <div className="absolute inset-y-0 right-0 flex items-center">
           <button
-            onClick={nextSlide}
-            className="bg-blue-800 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-600"
+            onClick={nextMobile}
+            className="absolute inset-y-0 right-0 flex items-center
+                    bg-blue-800 text-white px-2 py-1 text-sm leading-none 
+                    rounded-full shadow-md
+                    transform scale-75 hover:scale-60
+                    z-5"
           >
             ❯
           </button>

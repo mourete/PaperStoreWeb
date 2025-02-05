@@ -1,4 +1,4 @@
-import { FaFacebookF, FaGoogle, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaGoogle, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 import Settings from "../settings";
 
@@ -44,7 +44,7 @@ const Contacto: React.FC = () => {
                   <FaFacebookF size={20} className="mr-2" />
                   Facebook
                 </a>
-                {/* <a
+                <a
                   href={Settings.instagramLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -52,7 +52,7 @@ const Contacto: React.FC = () => {
                 >
                   <FaInstagram size={20} className="mr-2" />
                   Instagram
-                </a> */}
+                </a>
           </form>
         </div>
       </div>

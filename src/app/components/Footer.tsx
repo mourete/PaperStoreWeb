@@ -1,11 +1,11 @@
-import { FaFacebookF, FaGoogle, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaGoogle, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { HiLocationMarker, HiMail, HiClock } from "react-icons/hi";
 import Settings from "../settings";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-200">
-      <div className="bg-blue-900 text-white py-2">
+    <footer className="bg-gray-200 text-sm sm:text-base">
+      <div className="bg-blue-900 text-white py-2 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           <div>
             <HiLocationMarker className="mx-auto text-3xl" />
@@ -37,12 +37,12 @@ const Footer: React.FC = () => {
             >
               <FaFacebookF size={20} />
             </a>
-            {/* <a
+            <a
               href={Settings.instagramLink}
               className="hover:text-blue-700"
             >
               <FaInstagram size={20} />
-            </a> */}
+            </a>
             <a
               href={Settings.whatsAppLink}
               className="hover:text-blue-700"

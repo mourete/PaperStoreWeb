@@ -1,3 +1,5 @@
+"use client";
+
 const Beneficios = () => {
   const services = [
     {
@@ -39,27 +41,28 @@ const Beneficios = () => {
   ];
 
   return (
-    <section id="beneficios" className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto text-center mb-8">
-        <h2 className="text-4xl font-bold text-blue-800 uppercase">
+    <section id="beneficios" className="py-10 sm:py-16 bg-gray-50">
+      <div className="max-w-6xl mx-auto text-center px-4 sm:px-6 mb-8">
+        <h2 className="text-2xl sm:text-4xl font-bold text-blue-800 uppercase">
           Nuestros Beneficios
         </h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto px-4 sm:px-6">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-200 rounded-lg shadow-lg p-6 text-center flex flex-col items-center transform transition-transform duration-300 hover:scale-105"
+            className="bg-white border border-gray-200 rounded-lg shadow-lg p-4 sm:p-6 text-center flex flex-col items-center transform transition-transform duration-300 hover:scale-105"
           >
             <img
               src={service.image}
               alt={service.title}
-              className="w-20 h-20 mb-4 object-contain"
+              className="w-16 h-16 sm:w-20 sm:h-20 mb-4 object-contain"
             />
-            <h3 className="text-xl font-bold text-blue-800 mb-2">
+            <h3 className="text-lg sm:text-xl font-bold text-blue-800 mb-2">
               {service.title}
             </h3>
-            <p className="text-black text-sm text-justify">
+            <p className="text-xs sm:text-sm text-black text-justify">
               {service.description}
             </p>
           </div>
