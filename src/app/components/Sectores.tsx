@@ -2,9 +2,14 @@
 
 import { useState, useEffect } from "react";
 
-const Sectores = () => {
+interface Service {
+  title: string;
+  description: string[];
+  image: string;
+}
 
-  const services = [
+const Sectores = () => {
+  const services: Service[] = [
     {
       title: "SALUD",
       description: ["Infraestructura.", "Seguridad.", "Licencias.", "Otros."],
@@ -12,10 +17,7 @@ const Sectores = () => {
     },
     {
       title: "INMOBILIARIO",
-      description: [
-        "Cumplimiento de Contratos y renovaciones.",
-        "Servicios.",
-      ],
+      description: ["Cumplimiento de Contratos y renovaciones.", "Servicios."],
       image: "/inmobiliaria.png",
     },
     {
@@ -48,8 +50,9 @@ const Sectores = () => {
       </div>
 
       <div className="max-w-5xl mx-auto relative">
+        {/* Versión escritorio */}
         <div className="hidden sm:block">
-          <div className="flex overflow-hidden">
+          <div className="flex justify-center">
             {services.map((service, index) => (
               <div
                 key={index}
@@ -78,14 +81,14 @@ const Sectores = () => {
           </div>
         </div>
 
+        {/* Versión móvil */}
         <MobileSlider services={services} />
       </div>
     </section>
   );
 };
 
-
-function MobileSlider({ services }: { services: any[] }) {
+function MobileSlider({ services }: { services: Service[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -99,7 +102,7 @@ function MobileSlider({ services }: { services: any[] }) {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 3000); 
+    const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -110,10 +113,7 @@ function MobileSlider({ services }: { services: any[] }) {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {services.map((service, index) => (
-          <div
-            key={index}
-            className="w-full flex-shrink-0 flex justify-center px-2"
-          >
+          <div key={index} className="w-full flex-shrink-0 flex justify-center px-2">
             <div className="bg-white rounded-lg shadow-md p-4 w-64 flex flex-col items-center text-center min-h-[350px]">
               <img
                 src={service.image}
@@ -124,7 +124,7 @@ function MobileSlider({ services }: { services: any[] }) {
                 {service.title}
               </h3>
               <ul className="text-black text-left space-y-1">
-                {service.description.map((desc: string, idx: number) => (
+                {service.description.map((desc, idx) => (
                   <li key={idx} className="flex items-start">
                     <span className="text-green-600 mr-2">✔</span>
                     {desc}
@@ -136,24 +136,23 @@ function MobileSlider({ services }: { services: any[] }) {
         ))}
       </div>
 
+      {/* Flechas de navegación (más pequeñas y bien posicionadas) */}
       <button
         onClick={prevSlide}
-        className="absolute inset-y-0 left-0 flex items-center
-                    bg-blue-800 text-white px-2 py-1 text-sm leading-none 
-                    rounded-full shadow-md
-                    transform scale-75 hover:scale-60
-                    z-5"
+        className="absolute top-1/2 left-2 transform -translate-y-1/2
+                   bg-blue-800 text-white px-3 py-2 text-xs leading-none 
+                   rounded-full shadow-md hover:bg-blue-600
+                   z-10"
       >
         ❮
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute inset-y-0 right-0 flex items-center
-                    bg-blue-800 text-white px-2 py-1 text-sm leading-none 
-                    rounded-full shadow-md
-                    transform scale-75 hover:scale-60
-                    z-5"
+        className="absolute top-1/2 right-2 transform -translate-y-1/2
+                   bg-blue-800 text-white px-3 py-2 text-xs leading-none 
+                   rounded-full shadow-md hover:bg-blue-600
+                   z-10"
       >
         ❯
       </button>
