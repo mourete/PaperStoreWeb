@@ -5,25 +5,25 @@ const Beneficios = () => {
     {
       title: "PRECISIÓN EN LA RECOLECCIÓN DE DATOS",
       description:
-        "Configuración para la estructura operativa del levantamiento de información a través de instrumentos diseñados y controlados por asignación, recolección, consistencia para maximizar la veracidad de los datos.",
+        "Aseguramos la veracidad de los datos a través de una estructura operativa configurable y controlada.  Nuestros instrumentos, diseñados con precisión, garantizan asignación, recolección y consistencia.",
       image: "/recoleccion.png",
     },
     {
       title: "FLEXIBLE, SENCILLA Y EFICIENTE",
       description:
-        "Configurables para una carga de datos sencilla desde un dispositivo móvil y asegurando la calidad de los datos y su resguardo. Capacidad para evolucionar y adaptarse a los cambios y requerimientos futuros.",
+        "Carga de datos móvil sencilla y segura. Flexibilidad para adaptarse a tus necesidades presentes y futuras.",
       image: "/eficiente.png",
     },
     {
       title: "ANÁLISIS AVANZADO",
       description:
-        "Resumen y análisis del avance o estado de la captura de información para la toma de decisiones oportunas basadas en la realidad. Análisis de los resultados dimensional.",
+        "Resumen en tiempo real del avance, análisis dimensional profundo y base sólida para decisiones oportunas y basadas en la realidad.",
       image: "/analisis_avanzado.png",
     },
     {
       title: "COLABORACIÓN",
       description:
-        "Facilita el trabajo y comunicación con la conformación de equipos validados combinando control en la cantidad, vigencia y calidad de la data. Contribuye a minimizar los tiempos de recolección de datos.",
+        "Trabajo en equipo optimizado: Comunicación ágil, datos validados y recolección más rápida.",
       image: "/colaboracion.png",
     },
     {
@@ -35,7 +35,7 @@ const Beneficios = () => {
     {
       title: "USO ILIMITADO",
       description:
-        "Con capacidad ilimitada en la planificación de levantamiento de información.",
+        "Capacidad ilimitada para planificar y gestionar el levantamiento de información.",
       image: "/ilimitado.png",
     },
   ];

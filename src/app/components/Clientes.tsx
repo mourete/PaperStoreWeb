@@ -5,8 +5,8 @@ const Clientes = () => {
     {
       title: "Hospitales / Laboratorios",
       description: [
-        "Control Renovaciones Marcas/Licencias.",
-        "Cumplimiento de Seguridad de la información puestos de trabajo.",
+        "Control y renovación en marcas/licencias.",
+        "Cumplimiento de seguridad en la información.",
       ],
       icon: "/hospital.png",
     },
@@ -14,7 +14,7 @@ const Clientes = () => {
       title: "Inmobiliaria",
       description: [
         "Gestión de contratos y alertas.",
-        "Digitalización masiva de contratos y Caracterización.",
+        "Digitalización masiva de contratos y caracterización.",
       ],
       icon: "/inmobiliaria.png",
     },

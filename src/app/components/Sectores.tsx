@@ -12,27 +12,27 @@ const Sectores = () => {
   const services: Service[] = [
     {
       title: "SALUD",
-      description: ["Infraestructura.", "Seguridad.", "Licencias.", "Otros."],
+      description: ["Infraestructura.", "Seguridad.", "Licencias.", "Uso adecuado de equipos médicos."],
       image: "/Hospital_Sectores.png",
     },
     {
       title: "INMOBILIARIO",
-      description: ["Cumplimiento de Contratos y renovaciones.", "Servicios."],
+      description: ["Cumplimiento de Contratos y renovaciones.", "Servicios.", "Levantamiento de la calidad en la entrega de las casas habitaciones."],
       image: "/inmobiliaria.png",
     },
     {
       title: "EDUCACIÓN",
-      description: ["Infraestructura.", "Alimentación.", "Otros."],
+      description: ["Infraestructura.", "Alimentación.", "Mantenimiento de las aulas.", "Levantamiento de activos fijos."],
       image: "/educacion.png",
     },
     {
       title: "BANCA Y FINANZAS",
-      description: ["Agencias.", "Productividad.", "Otros."],
+      description: ["Agencias.", "Productividad.", "Evaluación de Riesgo Crediticio", "Auditorias internas y externas" ],
       image: "/finanzas.png",
     },
     {
       title: "CONSUMO MASIVO",
-      description: ["Sucursales.", "Otros."],
+      description: ["Sucursales.", "Experiencia del cliente en punto de venta.", "Gestión de inventario y stock en tiendas"],
       image: "/consumo.png",
     },
   ];

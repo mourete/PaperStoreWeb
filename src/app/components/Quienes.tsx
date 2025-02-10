@@ -17,12 +17,10 @@ const AboutUs: React.FC = () => {
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 sm:px-6 mt-8">
         <div>
           <p className="text-base sm:text-lg leading-relaxed text-justify font-bold text-black">
-            Somos un equipo de profesionales que brinda soluciones innovadoras para el
-            desarrollo y crecimiento de nuestros clientes.
+          Somos un equipo de profesionales dedicados a impulsar el crecimiento de nuestros clientes.  
           </p>
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-justify font-bold text-black">
-            Lo hacemos por medio de herramientas tecnológicas avanzadas para recolección
-            y procesamiento de información que contribuyan en sus planes y objetivos.
+          Utilizamos herramientas tecnológicas avanzadas para transformar datos en información estratégica que contribuye directamente a sus planes y objetivos.
           </p>
         </div>
 
