@@ -50,7 +50,7 @@ const Sectores = () => {
       </div>
 
       <div className="max-w-5xl mx-auto relative">
-        {/* Versión escritorio */}
+     
         <div className="hidden sm:block">
           <div className="flex justify-center">
             {services.map((service, index) => (

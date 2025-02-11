@@ -38,7 +38,7 @@ const Clientes = () => {
             key={index}
             className="bg-white rounded-lg shadow-md p-4 sm:p-6 flex flex-col items-center text-center"
           >
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-lg overflow-hidden mb-4 border-2 sm:border-4 border-lime-300">
+            <div className="w-50 h-50 sm:w-90 sm:h-60 rounded-lg overflow-hidden mb-4">
               <img
                 src={item.icon}
                 alt={item.title}
