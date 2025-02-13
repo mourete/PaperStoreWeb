@@ -1,163 +1,67 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
-interface Service {
-  title: string;
-  description: string[];
-  image: string;
-}
-
-const Sectores = () => {
-  const services: Service[] = [
+const Clientes = () => {
+  const cases = [
     {
-      title: "SALUD",
-      description: ["Infraestructura.", "Seguridad.", "Licencias.", "Otros."],
-      image: "/Hospital_Sectores.png",
+      title: "1. Configuración Personalizada:",
+      description: [
+        "Evaluamos las necesidades específicas de tu empresa para ofrecerte una solución adaptada y personalizada.",
+      ],
+      icon: "/configuracion.png",
     },
     {
-      title: "INMOBILIARIO",
-      description: ["Cumplimiento de Contratos y renovaciones.", "Servicios."],
-      image: "/inmobiliaria.png",
+      title: "2. Registro de Información:",
+      description: [
+        "Los equipos de trabajo colaboran con la información que se organiza y centraliza.",
+      ],
+      icon: "/informacion.png",
     },
     {
-      title: "EDUCACIÓN",
-      description: ["Infraestructura.", "Alimentación.", "Otros."],
-      image: "/educacion.png",
-    },
-    {
-      title: "BANCA Y FINANZAS",
-      description: ["Agencias.", "Productividad.", "Otros."],
-      image: "/finanzas.png",
-    },
-    {
-      title: "CONSUMO MASIVO",
-      description: ["Sucursales.", "Otros."],
-      image: "/consumo.png",
+      title: "3. Monitoreo, Alertas y Resultados:",
+      description: [
+        "Paperstore te permite monitorear los datos registrados y al configurar alertas automáticas genera resultados detallados para el control y tomas de decisiones.",
+      ],
+      icon: "/monitoreo.png",
     },
   ];
 
   return (
-    <section id="sectores" className="py-16 bg-blue-100">
-      <div className="text-center">
-        <h2 className="text-5xl font-bold text-blue-800 uppercase mb-6">
-          Sectores
+    <section id="componentes" className="py-10 sm:py-16 bg-white">
+      <div className="max-w-6xl mx-auto text-center px-4 sm:px-6 mb-8">
+        <h2 className="text-2xl sm:text-4xl font-bold text-blue-800 uppercase">
+          ¿CÓMO FUNCIONA?
         </h2>
-        <p className="text-lg text-blue-700 mt-2">
-          <span className="font-bold text-blue-900">Paperstore</span> es usado
-          en todos los sectores de la industria.
-        </p>
       </div>
 
-      <div className="max-w-5xl mx-auto relative">
-        {/* Versión escritorio */}
-        <div className="hidden sm:block">
-          <div className="flex justify-center">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-full sm:w-1/3 md:w-1/4 lg:w-1/5 px-2"
-              >
-                <div className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center h-full min-h-[350px]">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-32 object-cover mb-4 rounded-lg border-2 border-gray-300"
-                  />
-                  <h3 className="text-xl font-bold text-blue-800 mb-4">
-                    {service.title}
-                  </h3>
-                  <ul className="text-black text-left space-y-1">
-                    {service.description.map((desc, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <span className="text-green-600 mr-2">✔</span>
-                        {desc}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto px-4 sm:px-6">
+        {cases.map((item, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow-md p-4 sm:p-6 flex flex-col items-center text-center transition-transform hover:translate-y-2 hover:shadow-lg" // Añadido efecto hover y sombras
+          >
+            <div className="w-48 h-48 sm:w-40 sm:h-40 rounded-lg overflow-hidden mb-4">
+              <img
+                src={item.icon}
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold text-blue-800 mb-4">
+              {item.title}
+            </h3>
+            <ul className="text-left text-sm sm:text-base text-black text-justify">
+              {item.description.map((desc, idx) => (
+                <li key={idx} className="flex items-center mb-2">
+                  <span className="text-green-600 mr-2">✔</span>
+                  {desc}
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
-
-        {/* Versión móvil */}
-        <MobileSlider services={services} />
+        ))}
       </div>
     </section>
   );
 };
 
-function MobileSlider({ services }: { services: Service[] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % services.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? services.length - 1 : prev - 1
-    );
-  };
-
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="sm:hidden overflow-hidden w-full h-[420px] relative">
-      <div
-        className="flex transition-transform duration-500 h-full"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {services.map((service, index) => (
-          <div key={index} className="w-full flex-shrink-0 flex justify-center px-2">
-            <div className="bg-white rounded-lg shadow-md p-4 w-64 flex flex-col items-center text-center min-h-[350px]">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-32 object-cover mb-4 rounded-lg border-2 border-gray-300"
-              />
-              <h3 className="text-xl font-bold text-blue-800 mb-4">
-                {service.title}
-              </h3>
-              <ul className="text-black text-left space-y-1">
-                {service.description.map((desc, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <span className="text-green-600 mr-2">✔</span>
-                    {desc}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Flechas de navegación (más pequeñas y bien posicionadas) */}
-      <button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-2 transform -translate-y-1/2
-                   bg-blue-800 text-white px-3 py-2 text-xs leading-none 
-                   rounded-full shadow-md hover:bg-blue-600
-                   z-10"
-      >
-        ❮
-      </button>
-
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2
-                   bg-blue-800 text-white px-3 py-2 text-xs leading-none 
-                   rounded-full shadow-md hover:bg-blue-600
-                   z-10"
-      >
-        ❯
-      </button>
-    </div>
-  );
-}
-
-export default Sectores;
+export default Clientes;

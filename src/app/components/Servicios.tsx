@@ -26,7 +26,7 @@ const ServiciosCarrusel = () => {
     },
     {
       title: "Correo",
-      description: "Correo corporativo eficiente.",
+      description: "Notificaciones a correo corporativo.",
       image: "/correo.png",
     },
   ];
@@ -68,8 +68,8 @@ const ServiciosCarrusel = () => {
   return (
     <section id="servicios" className="py-16 bg-blue-100">
       <div className="text-center">
-        <h2 className="text-5xl font-bold text-blue-800 uppercase mb-6">
-          Servicios
+        <h2 className="text-5xl font-bold text-blue-800 uppercase mb-4">
+          Funcionamiento
         </h2>
       </div>
 
@@ -83,16 +83,16 @@ const ServiciosCarrusel = () => {
                   index === desktopIndex ? "scale-100" : "scale-90 opacity-70"
                 }`}
               >
-                <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center h-60">
+                <div className="bg-white rounded-lg shadow-md p-3 flex flex-col items-center">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-32 h-32 mb-4 rounded-lg object-cover border-2 border-gray-300"
+                    className="w-[250px] h-[240px] mb-8 rounded-lg object-cover"
                   />
                   <h3 className="text-xl font-bold text-blue-800">
                     {service.title}
                   </h3>
-                  <p className="text-black text-center">
+                  <p className="text-black text-center mb-8">
                     {service.description}
                   </p>
                 </div>

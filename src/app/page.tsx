@@ -9,6 +9,7 @@ import Contacto from "./components/Contacto";
 import WhatsAppButton from "./components/Whatsapp";
 import Clientes from "./components/Clientes";
 import Sectores from "./components/Sectores";
+import Componentes from './components/Componentes';
 
 export default function Home() {
   return (
@@ -17,10 +18,15 @@ export default function Home() {
       <Imagen/>
       <Quienes/>
       <Productividad/>
-      <Servicios/>
+      
       <Beneficios/>
       <Clientes/>
+
+      
+      <Servicios/>      
       <Sectores/>
+      <Componentes/>
+      
       <Contacto/>
       <Footer/>
       <WhatsAppButton/>

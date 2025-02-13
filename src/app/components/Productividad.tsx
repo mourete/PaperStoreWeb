@@ -1,47 +1,60 @@
 "use client";
 
-const Productividad = () => {
-  const features = [
-    { title: "Flujos de trabajo e Integración", image: "/flujo.png" },
-    { title: "Productividad", image: "/productividad.png" },
-    { title: "Levantamiento de Información", image: "/levantamiento.png" },
-    { title: "Análisis de la Información", image: "/analisis.png" },
-  ];
+import React from "react";
 
+const AboutUs: React.FC = () => {
   return (
-    <section className="py-10 sm:py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="
-                flex flex-col items-center justify-center
-                w-32 h-32
-                sm:w-36 sm:h-36
-                md:w-40 md:h-40
-                rounded-full
-                bg-gradient-to-b from-blue-500 to-lime-500
-                shadow-lg text-white
-                hover:scale-105
-                transition-transform
-                duration-300
-              "
-            >
-              <img
-                src={feature.image}
-                alt={feature.title}
-                className="w-12 h-12 sm:w-16 sm:h-16 mb-2 object-contain"
-              />
-              <h3 className="text-center text-xs sm:text-sm md:text-base font-bold">
-                {feature.title}
-              </h3>
+    <section id="desafio" className="py-10 sm:py-16 md:py-20 bg-white">
+      <div className="max-w-6xl mx-auto text-center px-4 sm:px-6">
+        <div className="flex items-center justify-center">
+          <span className="block w-16 h-[1px] bg-lime-300"></span>
+          <h2 className="mx-3 text-2xl sm:text-3xl md:text-4xl font-bold text-blue-800 uppercase">
+            DESAFÍO
+          </h2>
+          <span className="block w-16 h-[1px] bg-lime-300"></span>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 mt-8 flex flex-col md:flex-row items-start gap-8">
+        <div className="md:w-1/2 flex items-center justify-center">
+          <img
+            src="/equipo.jpg"
+            alt="Quiénes somos"
+            className="max-w-full h-auto rounded-lg shadow-md"
+          />
+        </div>
+
+        <div className="md:w-1/2">
+          <p className="text-base sm:text-sm leading-relaxed text-justify text-black mb-4">
+            Las empresas hoy en día enfrentan desafíos comunes que impactan su eficiencia y rentabilidad:
+          </p>
+          <div>
+            <div className="flex items-start mb-2">
+              <span className="text-green-600 mr-2 mt-1 flex-shrink-0">✔</span>
+              <p className="text-base sm:text-sm leading-relaxed text-black">
+                Datos Dispersos y Desactualizados: La información se encuentra fragmentada en múltiples fuentes, lo que genera retrasos y decisiones basadas en datos incompletos.
+              </p>
             </div>
-          ))}
+            <div className="flex items-start mb-2">
+              <span className="text-green-600 mr-2 mt-1 flex-shrink-0">✔</span>
+              <p className="text-base sm:text-sm leading-relaxed text-black">
+                Errores Humanos y Procesos Manuales: La dependencia de métodos manuales propicia errores en la gestión de información, afectando la calidad de los reportes y aumentando los costos.
+              </p>
+            </div>
+            <div className="flex items-start mb-2">
+              <span className="text-green-600 mr-2 mt-1 flex-shrink-0">✔</span> 
+              <p className="text-base sm:text-sm leading-relaxed text-black">
+                Falta de Colaboración y Acceso Inmediato: Los equipos trabajan aislados y sin acceso en tiempo real a datos críticos, lo que dificulta la coordinación y la toma de decisiones estratégicas.
+              </p>
+            </div>
+            <p className="text-base sm:text-sm leading-relaxed text-justify text-black mt-8">
+              Paperstore combate estos problemas al integrar todos tus datos en una única plataforma inteligente, permitiendo una visión unificada y confiable de la información esencial.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Productividad;
+export default AboutUs;

@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
         <div className="flex items-center justify-center">
           <span className="block w-16 h-[1px] bg-lime-300"></span>
           <h2 className="mx-3 text-2xl sm:text-3xl md:text-4xl font-bold text-blue-800 uppercase">
-            QUIENES SOMOS
+            ¿Qué es Paperstore?
           </h2>
           <span className="block w-16 h-[1px] bg-lime-300"></span>
         </div>
@@ -17,12 +17,10 @@ const AboutUs: React.FC = () => {
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 sm:px-6 mt-8">
         <div>
           <p className="text-base sm:text-lg leading-relaxed text-justify font-bold text-black">
-            Somos un equipo de profesionales que brinda soluciones innovadoras para el
-            desarrollo y crecimiento de nuestros clientes.
+          Paperstore es la solución integral diseñada para centralizar, organizar y analizar datos críticos y dinámicos de manera ágil y segura.   
           </p>
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-justify font-bold text-black">
-            Lo hacemos por medio de herramientas tecnológicas avanzadas para recolección
-            y procesamiento de información que contribuyan en sus planes y objetivos.
+          Con Paperstore, tu empresa puede dejar atrás el caos de hojas de cálculo y sistemas aislados, garantizando que cada área disponga de información actualizada y confiable en todo momento.
           </p>
         </div>
 

@@ -9,11 +9,12 @@ const Navbar: React.FC = () => {
 
   const handleScroll = () => {
     const sections = [
-      { id: "inicio", offsetTop: document.getElementById("inicio")?.offsetTop },
+      { id: "paperstore", offsetTop: document.getElementById("paperstore")?.offsetTop },
+      { id: "desafio", offsetTop: document.getElementById("desafio")?.offsetTop },
       { id: "quienes", offsetTop: document.getElementById("quienes")?.offsetTop },
-      { id: "servicios", offsetTop: document.getElementById("servicios")?.offsetTop },
       { id: "beneficios", offsetTop: document.getElementById("beneficios")?.offsetTop },
-      { id: "sectores", offsetTop: document.getElementById("sectores")?.offsetTop },
+      { id: "implementacion", offsetTop: document.getElementById("implementacion")?.offsetTop },
+      { id: "componentes", offsetTop: document.getElementById("componentes")?.offsetTop },
       { id: "contacto", offsetTop: document.getElementById("contacto")?.offsetTop },
     ];
 
@@ -38,11 +39,11 @@ const Navbar: React.FC = () => {
   };
 
   const menuItems = [
-    { href: "#inicio", label: "INICIO" },
-    { href: "#quienes", label: "QUIENES SOMOS" },
-    { href: "#servicios", label: "SERVICIOS" },
+    { href: "#paperstore", label: "PAPERSTORE" },
+    { href: "#desafio", label: "DESAFÍO" },
     { href: "#beneficios", label: "BENEFICIOS" },
-    { href: "#sectores", label: "SECTORES" },
+    { href: "#implementacion", label: "IMPLEMENTACIÓN" },
+    { href: "#componentes", label: "COMPONENTES" },
     { href: "#contacto", label: "CONTACTO" },
   ];
 
@@ -68,9 +69,9 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div className="flex items-center justify-between px-4 py-3 md:px-20">
+      <div className="flex items-center justify-between px-4 py-3 md:px-18">
         <div className="flex items-center">
-          <img src="/logo.png" alt="SoftPath" className="h-12 w-auto" />
+          <img src="/logo.png" alt="Spaperstore" className="h-20 w-auto" />
         </div>
 
         <div className="md:hidden">
@@ -103,7 +104,7 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
-        <ul className="hidden md:flex space-x-4 text-sm">
+        <ul className="hidden md:flex space-x-4 text-xs">
           {renderLinks()}
         </ul>
       </div>
