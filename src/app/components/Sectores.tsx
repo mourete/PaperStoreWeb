@@ -26,7 +26,7 @@ const Clientes = () => {
   ];
 
   return (
-    <section id="componentes" className="py-10 sm:py-16 bg-white">
+    <section className="py-10 sm:py-16 bg-white">
       <div className="max-w-6xl mx-auto text-center px-4 sm:px-6 mb-8">
         <h2 className="text-2xl sm:text-4xl font-bold text-blue-800 uppercase">
           ¿CÓMO FUNCIONA?
@@ -52,7 +52,6 @@ const Clientes = () => {
             <ul className="text-left text-sm sm:text-base text-black text-justify">
               {item.description.map((desc, idx) => (
                 <li key={idx} className="flex items-center mb-2">
-                  <span className="text-green-600 mr-2">✔</span>
                   {desc}
                 </li>
               ))}

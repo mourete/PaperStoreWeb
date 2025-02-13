@@ -10,12 +10,12 @@ const Componentes = () => {
           ¿Estás listo para Paperstore?
         </h2>
       </div>
-    <section id="conectaFuturo" className="relative w-full h-40 bg-cover bg-center" style={{ backgroundImage: `url('/conecta.jpg')` }}>
-      <div className="absolute inset-0 flex items-center justify-center w-full h-full bg-black/50">
+    <section id="conectaFuturo" className="relative w-full h-40 bg-gradient-to-r from-blue-900 to-lime-500 bg-cover bg-center">
+      <div className="absolute inset-0 flex items-center justify-center w-full h-full">
 
         <div className="max-w-7xl mx-auto px-2 sm:px-4 text-center">
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-5xl font-bold text-white uppercase leading-tight whitespace-nowrap">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-4xl font-bold text-white uppercase leading-tight whitespace-nowrap">
 
             &quot;CONECTA TUS DATOS, CONSTRUYE TU FUTURO&quot;
           </h1>

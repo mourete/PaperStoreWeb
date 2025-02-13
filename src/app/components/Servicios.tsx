@@ -66,7 +66,7 @@ const ServiciosCarrusel = () => {
   }, []);
 
   return (
-    <section id="servicios" className="py-16 bg-blue-100">
+    <section id="componentes" className="py-16 bg-blue-100">
       <div className="text-center">
         <h2 className="text-5xl font-bold text-blue-800 uppercase mb-4">
           Funcionamiento

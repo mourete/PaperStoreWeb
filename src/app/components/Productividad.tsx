@@ -18,7 +18,7 @@ const AboutUs: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 mt-8 flex flex-col md:flex-row items-start gap-8">
         <div className="md:w-1/2 flex items-center justify-center">
           <img
-            src="/equipo.jpg"
+            src="/equipo.png"
             alt="Quiénes somos"
             className="max-w-full h-auto rounded-lg shadow-md"
           />

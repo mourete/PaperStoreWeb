@@ -52,7 +52,6 @@ const Clientes = () => {
             <ul className="text-left text-sm sm:text-base text-black text-justify">
               {item.description.map((desc, idx) => (
                 <li key={idx} className="flex items-center mb-2">
-                  <span className="text-green-600 mr-2">✔</span>
                   {desc}
                 </li>
               ))}
