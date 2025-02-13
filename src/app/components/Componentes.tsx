@@ -12,12 +12,12 @@ const Componentes = () => {
       </div>
     <section id="conectaFuturo" className="relative w-full h-40 bg-cover bg-center" style={{ backgroundImage: `url('/conecta.jpg')` }}>
       <div className="absolute inset-0 flex items-center justify-center w-full h-full bg-black/50">
-        {/* Overlay negro semitransparente */}
+
         <div className="max-w-7xl mx-auto px-2 sm:px-4 text-center">
-          {/* Contenedor para centrar el texto */}
+
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-5xl font-bold text-white uppercase leading-tight whitespace-nowrap">
-            {/* Texto agrandado y sin salto de línea */}
-            "CONECTA TUS DATOS, CONSTRUYE TU FUTURO"
+
+            &quot;CONECTA TUS DATOS, CONSTRUYE TU FUTURO&quot;
           </h1>
         </div>
       </div>
