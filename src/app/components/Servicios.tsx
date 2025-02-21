@@ -67,36 +67,42 @@ const ServiciosCarrusel = () => {
 
   return (
     <section id="componentes" className="py-16 bg-blue-100">
-      <div className="text-center">
-        <h2 className="text-5xl font-bold text-blue-800 uppercase mb-4">
-          Funcionamiento
-        </h2>
-      </div>
+
+       <div className="flex items-center justify-center">
+          <span className="block w-72 h-[3px] bg-lime-300"></span>
+          <h2 className="mx-3 text-2xl sm:text-3xl md:text-4xl font-bold text-blue-800 uppercase">
+            COMPONENTES
+          </h2>
+          <span className="block w-72 h-[3px] bg-lime-300"></span>
+        </div>
+
+        <div className="flex items-center justify-center">
+          <h2 className="mx-5 md:text-xl font-bold text-black py-10 uppercase">
+            COMPONENTES DE LA SOLUCIÓN
+          </h2>      
+        </div>
 
       <div className="max-w-5xl mx-auto relative">
         <div className="hidden sm:block">
           <div className="flex overflow-hidden">
             {services.map((service, index) => (
               <div
-                key={index}
-                className={`flex-shrink-0 w-full sm:w-1/3 md:w-1/4 lg:w-1/5 transform transition-transform duration-500 ${
-                  index === desktopIndex ? "scale-100" : "scale-90 opacity-70"
-                }`}
-              >
-                <div className="bg-white rounded-lg shadow-md p-3 flex flex-col items-center">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-[250px] h-[240px] mb-8 rounded-lg object-cover"
-                  />
-                  <h3 className="text-xl font-bold text-blue-800">
-                    {service.title}
-                  </h3>
-                  <p className="text-black text-center mb-8">
-                    {service.description}
-                  </p>
-                </div>
+              key={index}
+              className={`flex-shrink-0 w-full sm:w-1/3 md:w-1/4 lg:w-1/5 transform transition-transform duration-500 ${
+                index === desktopIndex ? "scale-100" : "scale-90 opacity-70"
+              }`}
+            >
+              <div className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center w-[250px] h-[400px]">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-[200px] h-[200px] mb-4 rounded-lg object-cover"
+                />
+                <h3 className="text-xl font-bold text-blue-800">{service.title}</h3>
+                <p className="text-black text-center mt-2">{service.description}</p>
               </div>
+            </div>
+            
             ))}
           </div>
 
@@ -126,23 +132,20 @@ const ServiciosCarrusel = () => {
           >
             {services.map((service, index) => (
               <div
-                key={index}
-                className="w-full flex-shrink-0 flex justify-center"
-              >
-                <div className="bg-white rounded-lg shadow-md p-6 w-64 flex flex-col items-center">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-24 h-24 mb-4 rounded-lg object-cover border-2 border-gray-300"
-                  />
-                  <h3 className="text-xl font-bold text-blue-800">
-                    {service.title}
-                  </h3>
-                  <p className="text-black text-center">
-                    {service.description}
-                  </p>
-                </div>
+              key={index}
+              className="w-full flex-shrink-0 flex justify-center"
+            >
+              <div className="bg-white rounded-lg shadow-md p-4 w-[250px] h-[400px] flex flex-col items-center">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-[150px] h-[150px] mb-4 rounded-lg object-cover border-2 border-gray-300"
+                />
+                <h3 className="text-xl font-bold text-blue-800">{service.title}</h3>
+                <p className="text-black text-center mt-2">{service.description}</p>
               </div>
+            </div>
+            
             ))}
           </div>
 

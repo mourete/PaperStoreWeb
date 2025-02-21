@@ -27,11 +27,19 @@ const Clientes = () => {
 
   return (
     <section id="implementacion" className="py-10 sm:py-16 bg-white">
-      <div className="max-w-6xl mx-auto text-center px-4 sm:px-6 mb-8">
-        <h2 className="text-2xl sm:text-4xl font-bold text-blue-800 uppercase">
-          ¿Quiénes se han beneficiado de Paperstore?
-        </h2>
-      </div>
+      <div className="flex items-center justify-center">
+          <span className="block w-72 h-[3px] bg-lime-300"></span>
+          <h2 className="mx-3 text-2xl sm:text-3xl md:text-4xl font-bold text-blue-800 uppercase">
+            IMPLEMENTACIÓN
+          </h2>
+          <span className="block w-72 h-[3px] bg-lime-300"></span>
+        </div>
+
+        <div className="flex items-center justify-center">
+          <h2 className="mx-5 md:text-xl font-bold text-black py-10 uppercase">
+            ¿Quiénes se han beneficiado de Paperstore?
+          </h2>      
+        </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto px-4 sm:px-6">
         {cases.map((item, index) => (
