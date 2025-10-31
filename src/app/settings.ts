@@ -4,10 +4,10 @@ const getSettings = (): {
   instagramLink: string;
   correoLink: string;
 } => {
-  const whatsAppLink = process.env.WHATSAPP_LINK;
-  const facebookLink = process.env.FACEBOOK_LINK;
-  const instagramLink = process.env.INSTAGRAM_LINK;
-  const correoLink = process.env.CORREO_LINK;
+  const whatsAppLink = process.env.NEXT_PUBLIC_WHATSAPP_LINK;
+  const facebookLink = process.env.NEXT_PUBLIC_FACEBOOK_LINK;
+  const instagramLink = process.env.NEXT_PUBLIC_INSTAGRAM_LINK;
+  const correoLink = process.env.NEXT_PUBLIC_CORREO_LINK;
 
   if (
     whatsAppLink === undefined ||
