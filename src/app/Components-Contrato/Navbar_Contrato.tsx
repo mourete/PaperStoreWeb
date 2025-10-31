@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
 
   const handleScroll = () => {
     const sections = [
-      { id: "paperstore Contrato", offsetTop: document.getElementById("paperstore")?.offsetTop },
+      { id: "paperstore", offsetTop: document.getElementById("paperstore")?.offsetTop },
       { id: "desafio", offsetTop: document.getElementById("desafio")?.offsetTop },
       { id: "quienes", offsetTop: document.getElementById("quienes")?.offsetTop },
       { id: "beneficios", offsetTop: document.getElementById("beneficios")?.offsetTop },
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
   };
 
   const menuItems = [
-    { href: "#paperstore", label: "PAPERSTORE" },
+    { href: "#paperstore", label: "PAPERSTORE CONTRATO" },
     { href: "#desafio", label: "DESAFÍO" },
     { href: "#beneficios", label: "BENEFICIOS" },
     { href: "#implementacion", label: "IMPLEMENTACIÓN" },
